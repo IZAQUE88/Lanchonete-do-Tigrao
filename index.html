@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tigrão Lanches</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="inicio">
+
+    <header class="banner">
+        <div class="marca">
+            <img src="c:\Users\Victor_i_Ramos\Downloads\Gemini_Generated_Image_vyrwasvyrwasvyrw.jpg" alt="Logotipo Tigrão Lanches" class="logotipo">
+            <h1>Lanchonete do Tigrão</h1>
+        </div>
+        <nav class="botoes">
+            <a href="#inicio" class="botao1">INÍCIO</a>
+            <a href="#lanches" class="botao1">LANCHES</a>
+            <a href="#misturas" class="botao1">MISTURAS</a>
+            <a href="#vitaminas" class="botao1">VITAMINAS</a>
+            <a href="#bebidas" class="botao1">BEBIDAS</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- GALERIA EM FORMAÇÃO 2x4 CENTRALIZADA -->
+        <section class="galeria">
+            <h2 class="subtitulo-galeria">Nossos Clássicos</h2>
+            <div class="imagens-grid-2x4">
+                <img src="https://i.pinimg.com/736x/7c/b2/78/7cb2781c8b1a5518aafb27e684b86697.jpg" alt="Hambúrguer Artesanal" class="imagen" onclick="abrirZoom(this)">
+                <img src="https://i.pinimg.com/736x/2a/0f/40/2a0f40da00bff46ed737ca80683a92d3.jpg" alt="HOT-DOG" class="imagen" onclick="abrirZoom(this)">
+                <img src="https://i.pinimg.com/736x/b5/af/01/b5af010b897c5e1621ae4c90a5be2628.jpg" alt="Batata-frita" class="imagen" onclick="abrirZoom(this)">
+                <img src="https://i.pinimg.com/736x/ea/be/4e/eabe4e125b6fae14cb6902e01c62a0fb.jpg" alt="X-Duplo Cheddar" class="imagen" onclick="abrirZoom(this)">
+                <img src="https://i.pinimg.com/736x/07/84/1c/07841ce6f7726d5148002f13b29859e4.jpg" alt="Vitaminas" class="imagen" onclick="abrirZoom(this)">
+                <img src="https://i.pinimg.com/1200x/61/bf/71/61bf714e1897c6dc167afc969057f5bb.jpg" alt="Misto-Quente" class="imagen" onclick="abrirZoom(this)">
+                <img src="https://i.pinimg.com/736x/ad/3e/bb/ad3ebb944372512e7924339bf56c03c2.jpg" alt="X-Salada Fresco" class="imagen" onclick="abrirZoom(this)">
+                <img src="https://i.pinimg.com/736x/07/58/25/075825bccffff9e212e7f2410e163e4f.jpg" alt="X-Triplo Monster" class="imagen" onclick="abrirZoom(this)">
+            </div>
+        </section>
+
+        <h1 class="titulo-principal">Cardápio</h1>
+
+        <!-- BARRA DE PESQUISA INTERATIVA -->
+        <div class="barra-pesquisa">
+            <input type="text" id="campoBusca" placeholder="🔍 Buscar lanche ou ingrediente (ex: bacon, cheddar, coca)..." onkeyup="filtrarCardapio()">
+        </div>
+
+        <div class="cardapio">
+            
+            <!-- LANCHES -->
+            <section id="lanches" class="categoria">
+                <h2 class="titulo-categoria">🍔 Lanches</h2>
+                <div class="grade-itens">
+                    
+                    <div class="pd1 destaque item-buscavel">
+                        <div class="info-item">
+                            <div class="topo-item">
+                                <h3>X-TIGRÃO</h3>
+                                <span class="preco">R$ 25,00</span>
+                            </div>
+                            <p class="ingredientes">Pão brioche, 2 hambúrgueres artesanais 150g, queijo cheddar, mussarela, bacon crocante, ovo, presunto, alface, tomate, milho, batata palha e molho especial do Tigrão.</p>
+                        </div>
+                        <button class="btn-add" onclick="adicionarItem('X-TIGRÃO', 25.00)">+ Adicionar</button>
+                    </div>
+
+                    <div class="pd1 item-buscavel">
+                        <div class="info-item">
+                            <div class="topo-item">
+                                <h3>Combo-Kids</h3>
+                                <span class="preco">R$ 25,00</span>
+                            </div>
+                            <p class="ingredientes">Mini X-Burguer (pão, carne 90g, queijo), porção de batata frita pequena, suco de caixinha ou refrigerante mini e brinde surpresa.</p>
+                        </div>
+                        <button class="btn-add" onclick="adicionarItem('Combo-Kids', 25.00)">+ Adicionar</button>
+                    </div>
+
+                    <div class="pd1 item-buscavel">
+                        <div class="info-item">
+                            <div class="topo-item">
+                                <h3>X-Triplo</h3>
+                                <span class="preco">R$ 20,00</span>
+                            </div>
+                            <p class="ingredientes">Pão de hambúrguer, 3 hambúrgueres bovinos, 3 fatias de queijo cheddar, maionese temperada e molho barbecue.</p>
+                        </div>
+                        <button class="btn-add" onclick="adicionarItem('X-Triplo', 20.00)">+ Adicionar</button>
+                    </div>
+
+                    <div class="pd1 item-buscavel">
+                        <div class="info-item">
+                            <div class="topo-item">
+                                <h3>X-Bacon</h3>
+                                <span class="preco">R$ 17,00</span>
+                            </div>
+                            <p class="ingredientes">Pão de hambúrguer, hambúrguer bovino, queijo mussarela derretido, tiras de bacon crocante, alface, tomate e maionese da casa.</p>
+                        </div>
+                        <button class="btn-add" onclick="adicionarItem('X-Bacon', 17.00)">+ Adicionar</button>
+                    </div>
+
+                    <div class="pd1 item-buscavel">
+                        <div class="info-item">
+                            <div class="topo-item">
+                                <h3>X-Duplo</h3>
+                                <span class="preco">R$ 15,00</span>
+                            </div>
+                            <p class="ingredientes">Pão de hambúrguer, 2 hambúrgueres bovinos, 2 fatias de queijo prato, cebola caramelizada e maionese verde.</p>
+                        </div>
+                        <button class="btn-add" onclick="adicionarItem('X-Duplo', 15.00)">+ Adicionar</button>
+                    </div>
+
+                    <div class="pd1 item-buscavel">
+                        <div class="info-item">
+                            <div class="topo-item">
+                                <h3>X-Salada</h3>
+                                <span class="preco">R$ 15,00</span>
+                            </div>
+                            <p class="ingredientes">Pão de hambúrguer, hambúrguer bovino, queijo mussarela, presunto, alface americana, rodelas de tomate, milho e maionese.</p>
+                        </div>
+                        <button class="btn-add" onclick="adicionarItem('X-Salada', 15.00)">+ Adicionar</button>
+                    </div>
+
+                    <div class="pd1 item-buscavel">
+                        <div class="info-item">
+                            <div class="topo-item">
+                                <h3>X-Simples</h3>
+                                <span class="preco">R$ 10,00</span>
+                            </div>
+                            <p class="ingredientes">Pão de hambúrguer tradicional, hambúrguer bovino, queijo mussarela derretido e maionese da casa.</p>
+                        </div>
+                        <button class="btn-add" onclick="adicionarItem('X-Simples', 10.00)">+ Adicionar</button>
+                    </div>
+
+                    <div class="pd1 item-buscavel">
+                        <div class="info-item">
+                            <div class="topo-item">
+                                <h3>HOT-DOG</h3>
+                                <span class="preco">R$ 8,00</span>
+                            </div>
+                            <p class="ingredientes">Pão de hot-dog macio, 2 salsichas ao molho de tomate caseiro, milho, ervilha, purê de batata, batata palha, ketchup e maionese.</p>
+                        </div>
+                        <button class="btn-add" onclick="adicionarItem('HOT-DOG', 8.00)">+ Adicionar</button>
+                    </div>
+
+                    <div class="pd1 item-buscavel">
+                        <div class="info-item">
+                            <div class="topo-item">
+                                <h3>Misto-Quente</h3>
+                                <span class="preco">R$ 7,00</span>
+                            </div>
+                            <p class="ingredientes">Pão de forma dourado na chapa com manteiga, 2 fatias generosas de presunto e 2 fatias de queijo mussarela derretido.</p>
+                        </div>
+                        <button class="btn-add" onclick="adicionarItem('Misto-Quente', 7.00)">+ Adicionar</button>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- MISTURAS -->
+            <section id="misturas" class="categoria">
+                <h2 class="titulo-categoria">🍟 Misturas</h2>
+                <div class="grade-itens">
+                    
+                    <div class="pd1 item-buscavel">
+                        <div class="info-item">
+                            <div class="topo-item">
+                                <h3>Batata-frita Pequena</h3>
+                                <span class="preco">R$ 10,00</span>
+                            </div>
+                            <p class="ingredientes">Porção individual (200g) de batatas palito crocantes com sal e orégano. Acompanha 1 sachê de maionese temperada.</p>
+                        </div>
+                        <button class="btn-add" onclick="adicionarItem('Batata-frita Pequena', 10.00)">+ Adicionar</button>
+                    </div>
+
+                    <div class="pd1 item-buscavel">
+                        <div class="info-item">
+                            <div class="topo-item">
+                                <h3>Batata-frita Média</h3>
+                                <span class="preco">R$ 15,00</span>
+                            </div>
+                            <p class="ingredientes">Porção média (350g) de batatas fritas sequinhas com cobertura opcional de queijo cheddar cremoso.</p>
+                        </div>
+                        <button class="btn-add" onclick="adicionarItem('Batata-frita Média', 15.00)">+ Adicionar</button>
+                    </div>
+
+                    <div class="pd1 item-buscavel">
+                        <div class="info-item">
+                            <div class="topo-item">
+                                <h3>Batata-frita Grande</h3>
+                                <span class="preco">R$ 20,00</span>
+                            </div>
+                            <p class="ingredientes">Porção família (500g) de batatas crocantes cobertas com cheddar derretido e pedaços de bacon frito.</p>
+                        </div>
+                        <button class="btn-add" onclick="adicionarItem('Batata-frita Grande', 20.00)">+ Adicionar</button>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- VITAMINAS -->
+            <section id="vitaminas" class="categoria">
+                <h2 class="titulo-categoria">🥤 Vitaminas</h2>
+                <div class="pd1 lista-card item-buscavel">
+                    <div class="cabecalho-lista">
+                        <div>
+                            <h3>Vitaminas Cremosas (500ml)</h3>
+                            <p class="ingredientes">Preparadas na hora com polpa ou fruta natural selecionada, leite gelado, açúcar ou adoçante e gelo batido.</p>
+                        </div>
+                        <span class="preco">R$ 15,00</span>
+                    </div>
+                    <div class="sabores-botoes">
+                        <button class="btn-sabor" onclick="adicionarItem('Vitamina de Morango', 15.00)">+ Morango</button>
+                        <button class="btn-sabor" onclick="adicionarItem('Vitamina de Maracujá', 15.00)">+ Maracujá</button>
+                        <button class="btn-sabor" onclick="adicionarItem('Vitamina de Maçã', 15.00)">+ Maçã</button>
+                        <button class="btn-sabor" onclick="adicionarItem('Vitamina de Laranja', 15.00)">+ Laranja</button>
+                        <button class="btn-sabor" onclick="adicionarItem('Vitamina de Manga', 15.00)">+ Manga</button>
+                        <button class="btn-sabor" onclick="adicionarItem('Vitamina de Melancia', 15.00)">+ Melancia</button>
+                        <button class="btn-sabor" onclick="adicionarItem('Vitamina de Banana', 15.00)">+ Banana</button>
+                        <button class="btn-sabor" onclick="adicionarItem('Vitamina de Abacate', 15.00)">+ Abacate</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BEBIDAS -->
+            <section id="bebidas" class="categoria">
+                <h2 class="titulo-categoria">🥫 Bebidas</h2>
+                <div class="pd1 lista-card item-buscavel">
+                    <div class="cabecalho-lista">
+                        <div>
+                            <h3>Refrigerantes & Energéticos</h3>
+                            <p class="ingredientes">Bebidas servidas bem geladas. Clique no item para adicionar ao seu pedido.</p>
+                        </div>
+                    </div>
+                    <ul class="lista-bebidas">
+                        <li onclick="adicionarItem('Coca-cola 300ml', 6.00)"><span>Coca-cola 300ml</span> <strong>R$ 6,00 +</strong></li>
+                        <li onclick="adicionarItem('Fanta-laranja 300ml', 6.00)"><span>Fanta-laranja 300ml</span> <strong>R$ 6,00 +</strong></li>
+                        <li onclick="adicionarItem('Fanta-Uva 300ml', 6.00)"><span>Fanta-Uva 300ml</span> <strong>R$ 6,00 +</strong></li>
+                        <li onclick="adicionarItem('Guaraná 300ml', 6.00)"><span>Guaraná 300ml</span> <strong>R$ 6,00 +</strong></li>
+                        <li onclick="adicionarItem('Fanta-laranja 2L', 10.00)"><span>Fanta-laranja 2L</span> <strong>R$ 10,00 +</strong></li>
+                        <li onclick="adicionarItem('Fanta-Uva 2L', 10.00)"><span>Fanta-Uva 2L</span> <strong>R$ 10,00 +</strong></li>
+                        <li onclick="adicionarItem('Guaraná 2L', 10.00)"><span>Guaraná 2L</span> <strong>R$ 10,00 +</strong></li>
+                        <li onclick="adicionarItem('Coca-cola 2L', 15.00)"><span>Coca-cola 2L</span> <strong>R$ 15,00 +</strong></li>
+                        <li onclick="adicionarItem('Monster Energético 475ml', 10.00)"><span>Monster Energético 475ml</span> <strong>R$ 10,00 +</strong></li>
+                        <li onclick="adicionarItem('Red-Horse Energético 2L', 10.00)"><span>Red-Horse Energético 2L</span> <strong>R$ 10,00 +</strong></li>
+                        <li onclick="adicionarItem('Baly Energético 2L', 10.00)"><span>Baly Energético 2L</span> <strong>R$ 10,00 +</strong></li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- BOTÃO FLUTUANTE DO CARRINHO -->
+    <button id="btnCarrinhoFlutuante" class="carrinho-flutuante" onclick="abrirCarrinho()">
+        🛒 Meu Pedido (<span id="qtdItens">0</span>) - R$ <span id="totalFlutuante">0,00</span>
+    </button>
+
+    <!-- MODAL DO CARRINHO -->
+    <div id="modalCarrinho" class="modal" onclick="fecharModalFora(event, 'modalCarrinho')">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharCarrinho()">&times;</span>
+            <h2>🐯 Seu Pedido - Tigrão Lanches</h2>
+            <ul id="listaPedidoModal" class="lista-pedido-modal">
+                <li>Seu carrinho está vazio.</li>
+            </ul>
+            <div class="rodape-modal">
+                <h3>Total: R$ <span id="totalModal">0,00</span></h3>
+                <div class="acoes-modal">
+                    <button class="btn-limpar" onclick="limparCarrinho()">Limpar</button>
+                    <button class="btn-finalizar" onclick="finalizarPedido()">Finalizar Pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE ZOOM DAS IMAGENS -->
+    <div id="modalZoom" class="modal" onclick="fecharZoom()">
+        <span class="fechar-zoom">&times;</span>
+        <img id="imgAmpliada" class="img-zoom-conteudo" src="" alt="Imagem ampliada">
+        <p id="legendaZoom" class="legenda-zoom"></p>
+    </div>
+
+    <!-- NOTIFICAÇÃO TOAST -->
+    <div id="toast" class="toast">Item adicionado!</div>
+
+    <footer>
+        <p>© 2026 Tigrão Lanches - O sabor que ruge mais alto!</p>
+    </footer>
+
+    <!-- INTERAÇÕES JAVASCRIPT -->
+    <script>
+        let carrinho = [];
+
+        function adicionarItem(nome, preco) {
+            carrinho.push({ nome, preco });
+            atualizarCarrinho();
+            mostrarToast(`✅ ${nome} adicionado ao pedido!`);
+        }
+
+        function removerItem(index) {
+            carrinho.splice(index, 1);
+            atualizarCarrinho();
+        }
+
+        function limparCarrinho() {
+            carrinho = [];
+            atualizarCarrinho();
+        }
+
+        function atualizarCarrinho() {
+            const qtdEl = document.getElementById('qtdItens');
+            const totalFlutuanteEl = document.getElementById('totalFlutuante');
+            const totalModalEl = document.getElementById('totalModal');
+            const listaModalEl = document.getElementById('listaPedidoModal');
+
+            let total = 0;
+            listaModalEl.innerHTML = '';
+
+            if (carrinho.length === 0) {
+                listaModalEl.innerHTML = '<li class="vazio">Nenhum item adicionado ainda.</li>';
+            } else {
+                carrinho.forEach((item, index) => {
+                    total += item.preco;
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <span>${item.nome}</span>
+                        <div>
+                            <strong>R$ ${item.preco.toFixed(2).replace('.', ',')}</strong>
+                            <button class="btn-remover" onclick="removerItem(${index})">✖</button>
+                        </div>
+                    `;
+                    listaModalEl.appendChild(li);
+                });
+            }
+
+            const totalFormatado = total.toFixed(2).replace('.', ',');
+            qtdEl.textContent = carrinho.length;
+            totalFlutuanteEl.textContent = totalFormatado;
+            totalModalEl.textContent = totalFormatado;
+        }
+
+        function abrirCarrinho() {
+            document.getElementById('modalCarrinho').style.display = 'flex';
+        }
+
+        function fecharCarrinho() {
+            document.getElementById('modalCarrinho').style.display = 'none';
+        }
+
+        function finalizarPedido() {
+            if (carrinho.length === 0) {
+                alert('Adicione pelo menos um item ao seu pedido!');
+                return;
+            }
+            let resumo = '🐯 *PEDIDO - TIGRÃO LANCHES* 🐯\n\n';
+            let total = 0;
+            carrinho.forEach(item => {
+                resumo += `• ${item.nome} - R$ ${item.preco.toFixed(2).replace('.', ',')}\n`;
+                total += item.preco;
+            });
+            resumo += `\n*Total: R$ ${total.toFixed(2).replace('.', ',')}*`;
+            
+            alert('Pedido montado com sucesso!\n\n' + resumo);
+            limparCarrinho();
+            fecharCarrinho();
+        }
+
+        function mostrarToast(mensagem) {
+            const toast = document.getElementById('toast');
+            toast.textContent = mensagem;
+            toast.classList.add('mostrar');
+            setTimeout(() => {
+                toast.classList.remove('mostrar');
+            }, 2200);
+        }
+
+        function filtrarCardapio() {
+            const termo = document.getElementById('campoBusca').value.toLowerCase();
+            const itens = document.querySelectorAll('.item-buscavel');
+
+            itens.forEach(item => {
+                const texto = item.textContent.toLowerCase();
+                item.style.display = texto.includes(termo) ? 'flex' : 'none';
+            });
+        }
+
+        function abrirZoom(img) {
+            document.getElementById('modalZoom').style.display = 'flex';
+            document.getElementById('imgAmpliada').src = img.src;
+            document.getElementById('legendaZoom').textContent = img.alt;
+        }
+
+        function fecharZoom() {
+            document.getElementById('modalZoom').style.display = 'none';
+        }
+
+        function fecharModalFora(event, idModal) {
+            if (event.target.id === idModal) {
+                document.getElementById(idModal).style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
